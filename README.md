@@ -57,7 +57,7 @@ nyc-taxi-project/
 
 ---
 
-# 🥉 **Bronze Layer (Raw Parquet)**
+# **Bronze Layer (Raw Parquet)**
 
 The Bronze layer stores the original raw data **as-is** but in efficient Parquet format.
 
@@ -66,7 +66,7 @@ Handled in:
 
 ---
 
-# 🥈 **Silver Layer (Clean, Typed, Validated)**
+# **Silver Layer (Clean, Typed, Validated)**
 
 Still in **Python + Pandas**, we:
 
@@ -78,12 +78,12 @@ Still in **Python + Pandas**, we:
 
 ---
 
-# 🥇 **Gold Layer (Star Schema + Anomaly Detection)**
+# **Gold Layer (Star Schema + Anomaly Detection)**
 
 Once Silver Parquet is created, the **Gold layer is fully modeled in DuckDB**.
 
 Handled in:
-📄 `pipeline/load_gold_to_duckdb.py`
+ `pipeline/load_gold_to_duckdb.py`
 
 ### **Dimension Tables**
 
@@ -108,7 +108,7 @@ All SQL definitions live under `sql/`.
 
 ---
 
-# ▶️ **Running the Pipeline**
+# **Running the Pipeline**
 
 0. create a venv and install requirements.txt
     0.0. python -m venv .env
@@ -128,7 +128,7 @@ This will:
 
 ---
 
-# 📊 **Querying Results**
+# **Querying Results**
 
 After running the pipeline, you can open DuckDB:
 
@@ -140,7 +140,7 @@ con.execute("SELECT * FROM fact_trips LIMIT 10").df()
 
 ---
 
-# 📬 **Next Steps / Optional Enhancements**
+# **Next Steps / Optional Enhancements**
 
 * Adding **DBT** for Gold transformation
 * Using **Airflow** for orchestration
